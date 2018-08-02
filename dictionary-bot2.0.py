@@ -49,7 +49,7 @@ def findWord(_text, _keyword):
     ''' Finds the word after the tracked term in the tweeter's text. '''
     if _keyword in _text:
         text_after_keyword = _text.split(_keyword + ' ')[1] # Split text string after 'define '
-        _word = text_after_keyword.split(' ')[0].split(',')[0].split('.')[0].split(';')[0].split('!')[0] # isolate the word requesting to be defined
+        _word = text_after_keyword.split('?')[0].split(' ')[0].split(',')[0].split('.')[0].split(';')[0].split('!')[0] # isolate the word requesting to be defined
         return _word
     else:
         return None
